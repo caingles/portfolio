@@ -1,10 +1,11 @@
 {
-  "name": "Portfolio Christian Inglés",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-watch": "sass dist/scss/main.scss src/css/main.css --watch"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/caingles/portfolio/issues"
   },
-  "homepage": "https://github.com/caingles/portfolio#readme"
+  "homepage": "https://github.com/caingles/portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
 }
