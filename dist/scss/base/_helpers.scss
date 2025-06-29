@@ -1,0 +1,20 @@
+body {
+    background-color: #282C33;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    border: 1px solid blue;
+    max-width: 1300px;
+    padding: 0 16px;
+    margin: 0;
+    margin: auto;
+}

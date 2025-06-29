@@ -1,3 +1,222 @@
-body {
-    background-color: red;
+@import url('../abstracts/_functions.scss');
+
+header {
+  align-items: center;
+  background-color: #131416;
+  border-radius: 38px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  max-width: 1300px;
+  padding: 5px 16px;
+  position: fixed;
+  top: 10px;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  z-index: 999;
+
+  a.logo {
+    display: inline-flex;
+
+    img {
+      height: auto;
+      width: 180px;
+
+      @media (min-width: 600px) {
+        width: 200px;
+      }
+
+      @media (min-width: 900px) {
+        width: 216px;
+      }
+
+      @media (min-width: 1024px) {
+        width: 237px;
+      }
+    }
+  }
+
+  .desktop-navigation-menu {
+    display: none;
+    max-width: 560px;
+    width: 100%;
+
+    ul {
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        display: flex;
+        gap: 4px;
+        line-height: 225%;
+        list-style: none;
+        position: relative;
+        width: fit-content;
+
+        a {
+          color: #ABB2BF;
+          display: block;
+          display: inline-flex;
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          height: 100%;
+          letter-spacing: 1px;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          >span {
+            color: transparent;
+            font-family: 'Poppins';
+            font-weight: 600;
+            transition: color 0ms;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 18px;
+          }
+        }
+
+        &:hover {
+          a {
+            color: #FFFFFF;
+
+            >span {
+              color: #FFFFFF;
+              transition: color 350ms;
+            }
+          }
+
+          .mark-circle {
+            span {
+              transform: scale(1);
+            }
+          }
+        }
+
+        .mark-circle {
+          bottom: 0px;
+          display: flex;
+          gap: 5px;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          z-index: -1;
+
+          span {
+            background-color: #FFFFFF;
+            border-radius: 100%;
+            height: 5px;
+            transform: scale(0);
+            transition: all 300ms ease;
+            width: 5px;
+
+            @media (min-width: 1024px) {
+              height: 6px;
+              width: 6px;
+            }
+          }
+        }
+
+
+      }
+    }
+
+    @media (min-width: 900px) {
+      display: flex;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 606px;
+    }
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 25px;
+    padding: 5px 2px;
+    position: relative;
+    width: 24px;
+
+    &:hover {
+      span {
+        &:nth-child(1),
+        &:nth-child(3) {
+          width: 100%;
+        }
+      }
+    }
+
+    span {
+      align-self: flex-end;
+      background-color: #FFFFFF;
+      border-radius: 20px;
+      height: 2px;
+      position: absolute;
+      right: 0;
+      transition: transform 300ms ease;
+      width: 100%;
+
+      &:nth-child(1) {
+        top: 3px;
+        width: 75%;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+        width: 75%;
+      }
+    }
+
+    &.-close {
+      span {
+        align-self: flex-end;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        height: 2px;
+        right: 0;
+        top: 10px;
+
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          background-color: transparent;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 900px) {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 600px) {
+    padding: 10px 32px;
+  }
+
+  @media (min-width: 900px) {
+    padding: 12px 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 15px 50px;
+  }
 }
