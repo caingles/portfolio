@@ -2,8 +2,11 @@
 
 header {
   align-items: center;
-  background-color: #131416;
+  // backdrop-filter: blur(55px);
+  // -webkit-backdrop-filter: blur(55px);
+  background-color: #131416cc;
   border-radius: 38px;
+  // box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: space-between;
   left: 50%;

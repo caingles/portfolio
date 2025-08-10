@@ -4,17 +4,40 @@ body {
 
 * {
     box-sizing: border-box;
-    font-size: 16px;
     font-family: Arial, sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 100%;
-    border: 1px solid blue;
-    max-width: 1300px;
-    padding: 0 16px;
     margin: 0;
     margin: auto;
+    max-width: 1300px;
+    padding: 0 16px;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        padding: 0 24px;
+
+    }
+    @media (min-width: 1200px) {
+        padding: 0 66px;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 0 50px;
+    }
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-space-grotesk {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.font-sora {
+  font-family: "Sora", sans-serif;
 }

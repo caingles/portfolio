@@ -1,5 +1,7 @@
 // Base
-@import "./base/helpers";
+@use "./base/helpers";
 
 // Components
-@import "./components/header", "./components/mobile-navigation-menu";
+@use "./components/header";
+@use "./components/mobile-navigation-menu";
+@use "./components/hero-section";
